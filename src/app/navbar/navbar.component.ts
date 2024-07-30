@@ -10,5 +10,6 @@ import { Component } from "@angular/core";
 })
 
 export default class NavbarComponent{
+  imageUrl:string="https://img.pikbest.com/png-images/ecommerce-logo-vector-graphics-element--e-commerce-logo-icon-design-online-store-logo-icon_1726010.png!w700wp"
 
 }
