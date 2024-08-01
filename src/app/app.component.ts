@@ -4,24 +4,105 @@ import NavbarComponent from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-NavbarComponent
+import { Meal } from './meal';
+import { NgFor, NgIf } from '@angular/common';
+import { MealCardComponent } from './meal-card/meal-card.component';
+import { AboutComponent } from "./about/about.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,FooterComponent,HomeComponent,FormsModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, HomeComponent, FormsModule, NgIf, NgFor, MealCardComponent, AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'my-app';
-  // userName:string ="fatma";
-  // haveCar:boolean =true;
-  // userAge:number=24;
-  // changeName(x:any){
-  //   this.userName=x.target.value
-  // }
-  // changeAge(){
-  //   this.userAge=Math.floor(Math.random()*100);
-  // }
+  
+
+  meals: Meal[] = [
+    {
+      "strMeal": "Laksa King Prawn Noodles",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/rvypwy1503069308.jpg",
+      "idMeal": "52821"
+    },
+    {
+      "strMeal": "Mediterranean Pasta Salad",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg",
+      "idMeal": "52777"
+    },
+    {
+      "strMeal": "Mee goreng mamak",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/xquakq1619787532.jpg",
+      "idMeal": "53048"
+    },
+    {
+      "strMeal": "Nasi lemak",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg",
+      "idMeal": "53051"
+    },
+    {
+      "strMeal": "Portuguese fish stew (Caldeirada de peixe)",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/do7zps1614349775.jpg",
+      "idMeal": "53045"
+    },
+    {
+      "strMeal": "Recheado Masala Fish",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/uwxusv1487344500.jpg",
+      "idMeal": "52809"
+    },
+    {
+      "strMeal": "Salmon Avocado Salad",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/1549542994.jpg",
+      "idMeal": "52960"
+    },
+    {
+      "strMeal": "Salmon Prawn Risotto",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/xxrxux1503070723.jpg",
+      "idMeal": "52823"
+    },
+    {
+      "strMeal": "Saltfish and Ackee",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/vytypy1511883765.jpg",
+      "idMeal": "52936"
+    },
+    {
+      "strMeal": "Seafood fideuà",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wqqvyq1511179730.jpg",
+      "idMeal": "52836"
+    },
+    {
+      "strMeal": "Shrimp Chow Fun",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/1529445434.jpg",
+      "idMeal": "52953"
+    },
+    {
+      "strMeal": "Sledz w Oleju (Polish Herrings)",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/7ttta31593350374.jpg",
+      "idMeal": "53023"
+    },
+    {
+      "strMeal": "Spring onion and prawn empanadas",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/1c5oso1614347493.jpg",
+      "idMeal": "53040"
+    },
+    {
+      "strMeal": "Sushi",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg",
+      "idMeal": "53065"
+    },
+    {
+      "strMeal": "Three Fish Pie",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/spswqs1511558697.jpg",
+      "idMeal": "52882"
+    },
+    {
+      "strMeal": "Tuna and Egg Briks",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/2dsltq1560461468.jpg",
+      "idMeal": "52975"
+    }
+  ];
+
+
 }
