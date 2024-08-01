@@ -1,6 +1,6 @@
 
 <div class="row">
-  @for (meal of meals; track $index) {
+  @for (meal of displayMeal; track $index) {
     <div class="col-md-4 col-lg-2">
       <app-product [meal]="meal"></app-product>
     </div>

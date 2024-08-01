@@ -93,4 +93,7 @@ export class HomeComponent {
       "idMeal": "52975"
     }
   ];
+
+  displayMeal:Meal[]=this.meals.slice(0,6);
+  
 }
